@@ -30,6 +30,19 @@ set list
 set listchars=tab:\ \ ,trail:·
 set diffopt+=iwhite
 
+" indention
+set autoindent
+set smartindent
+set expandtab
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
+vnoremap <TAB> >gv
+vnoremap <S-TAB> <gv
+vnoremap < <gv
+vnoremap > >gv
+let g:PHP_autoformatcomment = 0
+
 " autocomplete
 set infercase
 
@@ -63,3 +76,13 @@ nnoremap <Space> :
 vnoremap <Space> :
 inoremap jk <Esc>
 
+if has("autocmd")
+  " Drupal php files.
+  augroup module
+    autocmd BufRead,BufNewFile *.{module,install,test,inc,profile} set filetype=php
+    autocmd BufRead,BufNewFile *.{info,make,build} set filetype=dosini
+    autocmd BufRead,BufNewFile *.{module,install,test,inc,profile,php} setlocal formatoptions=clorq
+    autocmd BufRead,BufNewFile *.{module,install,test,inc,profile,php} setlocal comments=s1:/*,mb:*,ex:*/,://,:#
+    autocmd FileType php setlocal textwidth=80
+  augroup END
+endif
