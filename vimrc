@@ -6,7 +6,6 @@ call pathogen#helptags()
 " color settings (solarized)
 let g:solarized_diffmode="high"
 let g:solarized_contrast="high"
-let g:solarized_visibility="high"
 set background=dark
 colorscheme solarized
 call togglebg#map("<Leader>tb")
@@ -86,3 +85,4 @@ if has("autocmd")
     autocmd FileType php setlocal textwidth=80
   augroup END
 endif
+
