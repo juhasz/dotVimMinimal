@@ -19,3 +19,6 @@
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = https://github.com/vim-scripts/Markdown.git
+[submodule "dockerfile.vim"]
+	path = dockerfile.vim
+	url = https://github.com/honza/dockerfile.vim.git
