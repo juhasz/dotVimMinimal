@@ -4,11 +4,7 @@ call pathogen#incubate()
 call pathogen#helptags()
 
 " color settings (solarized)
-let g:solarized_diffmode="high"
-let g:solarized_contrast="high"
 set background=dark
-colorscheme solarized
-call togglebg#map("<Leader>tb")
 
 set mouse=a
 filetype plugin on
@@ -18,8 +14,6 @@ filetype indent on
 syntax on
 set nonumber
 set relativenumber
-set cursorcolumn
-set cursorline
 set wrap
 set linebreak
 set showbreak=…

@@ -1,6 +1,11 @@
 set background=dark
+let g:solarized_diffmode="high"
+let g:solarized_contrast="high"
 colorscheme solarized
+call togglebg#map("<Leader>tb")
 set guifont=menlo:h15
 set guioptions=eg
 set fuoptions=maxvert,maxhorz
 set visualbell
+set cursorcolumn
+set cursorline
